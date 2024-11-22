@@ -1,0 +1,208 @@
+/* .tabs {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 400px;
+    font-family: sans-serif;
+}  */ 
+
+.card-container {
+    display: flex;              /*Use Flexbox for a flexible layout */
+    justify-content: center;   /*Center the cards horizontally within the container */
+    gap: 50px;                 /*Create a 50px space between each card*/
+    flex-wrap: wrap;         /* Allow the cards to wrap onto multiple lines if necessary */
+    margin-top: 50px;
+} 
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(21, 19, 19, 0.2);
+    width: 300px;
+    text-align: center;
+    font-family: arial;
+    border: 2px solid #5ea457;
+    border-radius: 5px;          
+    padding: 10px; 
+}
+  
+.card-img{
+    width: 100%;
+    height: auto;
+}
+  
+.card-container-addon {
+    display: flex;              /*Use Flexbox for a flexible layout */
+    justify-content: center;   /*Center the cards horizontally within the container */             
+    flex-wrap: wrap;         /* Allow the cards to wrap onto multiple lines if necessary */
+} 
+  
+.card-addon{
+    box-shadow: 0 4px 8px 0 rgba(21, 19, 19, 0.2);
+    width: auto;
+    border: 2px solid #5ea457;
+    border-radius: 5px;          
+    padding: 10px; 
+}
+  
+.card-addon img{
+    max-width: 100%;
+    height: auto;
+}
+  
+.price {
+    color: rgb(36, 156, 72);
+    font-size: 22px;
+}
+
+.tabs__label{
+    display: inline-block;
+    padding: 10px 16px;
+    cursor: pointer;
+    background-color: #f0f0f0; /* Light gray background for inactive tabs */
+    color: #333; /* Dark text color */
+    border: 2px solid transparent; /* Border for spacing */
+    border-radius: 5px; /* Rounded corners for labels */
+    margin-right: 5px; /* Space between tabs */
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Smooth transitions */
+}
+
+/* Hover effect for tabs */
+.tabs__label:hover {
+    background-color: #e0e0e0; /* Slightly darker gray for hover state */
+}
+
+.tabs__radio{
+    display: none;
+}
+
+.tabs__content{
+    order: 1;
+    width: 100%;
+    border-bottom: 3px solid #fffaf3;
+    line-height: 1.5;
+    font-size: 0.9em;
+    display: none;
+}
+
+.tabs__radio:checked+.tabs__label{
+    font-weight: bold;
+    color: #009578;
+    border: 2px solid #009578; 
+}
+
+.tabs__radio:checked+.tabs__label+.tabs__content{
+    display: block;
+}
+
+/* Display the content of the first tab by default */
+.tabs__radio:first-of-type:checked + .tabs__label + .tabs__content {
+    display: block;
+}
+
+@media screen and (max-width: 715px) {
+    .card-container {
+        display: flex;
+        flex-wrap: wrap; 
+        gap: 15px;
+    }
+
+    .tabs__label {
+        display: inline-block;
+        padding: 10px 8px; 
+        margin-right: 1px; 
+    }
+}
+
+@media screen and (max-width: 665px) {
+    .card-addon{
+      box-shadow: 0 4px 8px 0 rgba(21, 19, 19, 0.2);
+      width: auto;
+      border: 2px solid #5ea457;
+      border-radius: 5px;          
+      padding: 10px; 
+    }
+}
+
+@media screen and (max-width: 675px) {
+    .card-container {
+        display: flex;
+        flex-wrap: wrap; 
+        gap: 15px;
+    }
+
+    .tabs__label {
+        display: inline-block;
+        padding: 10px 8px; 
+        margin-right: 1px; 
+    }
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(21, 19, 19, 0.2);
+        width: 260px;
+        text-align: center;
+        font-family: arial;
+        border: 2px solid #5ea457;
+        border-radius: 5px;          
+        padding: 10px; 
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .card-container {
+        display: flex;
+        flex-wrap: wrap; 
+        gap: 35px;
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+
+    .tabs__label {
+        display: inline-block;
+        padding: 10px 8px; 
+        margin-right: 1px; 
+    }
+}
+
+@media screen and (max-width: 568px) {
+    .card-container {
+        display: flex;
+        flex-wrap: wrap; 
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .tabs__label {
+        display: inline-block;
+        padding: 10px 8px; 
+        margin-right: 2px; 
+    }
+}
+
+@media screen and (max-width: 504px) {
+    .card-container {
+        display: flex;
+        flex-wrap: wrap; 
+        gap: 10px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .tabs__label {
+        display: inline-block;
+        padding: 5px 4px; 
+        margin-right: 1px; 
+    }
+}
+
+@media screen and (max-width: 468px) {
+    .card-container {
+        display: flex;
+        flex-wrap: wrap; 
+        gap: 5px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .tabs__label {
+        display: inline-block;
+        padding: 5px 4px; 
+        margin-right: 1px; 
+    }
+}
